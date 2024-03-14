@@ -21,6 +21,7 @@ int main()
 	SortTestHelper::testSort("mergeSort", mergeSort, c, n);
 //	SortTestHelper::testSort("shellSort", shellSort, d, n);
 	SortTestHelper::printArray(c, n);
+	;
 
 	delete[] a;
 	delete[] b;
