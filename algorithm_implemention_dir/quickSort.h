@@ -8,13 +8,14 @@ int __partition(T arr[], int l, int r)
 {
     T v = arr[l];
 
-    // arr[l+1..j]<v;arr[j+1...i)>v  ,i means the one in dealing
+    // arr[l+1..j]<v;arr[j+1...i]>v
     int j = l;
     for (int i = l + 1; i <= r; i++)
     {
         if (arr[i] < v)
         {
-            std::swap(arr[++j], arr[i]);
+            std::swap(arr[j + 1], arr[i]);
+            j++;
         }
     }
     std::swap(arr[l], arr[j]);
@@ -35,7 +36,7 @@ void __quickSort(T arr[], int l, int r)
     __quickSort(arr, p + 1, r);
 }
 
-template <class T>
+template <class T> 
 void quickSort(T arr[], int n)
 {
     __quickSort(arr, 0, n - 1);
