@@ -4,7 +4,7 @@ project("algorithm_test")
 
 add_executable(${PROJECT_NAME} ./test.cpp)
 
-set(IF_REVIEW on) # 初始化变量
+set(IF_REVIEW off) # 初始化变量
 
 # 目标包含目录，根据IF_REVIEW的值选择不同的目录
 target_include_directories(${PROJECT_NAME}

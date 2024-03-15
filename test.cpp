@@ -4,10 +4,11 @@
 #include "mergeSort.h"
 #include "SortTestHelper.h"
 #include "shellSort.h"
+#include "quickSort.h"
 
 int main()
 {
-	int n = 10;
+	int n = 100000;
 
 	int *a = SortTestHelper::generateRandomArray(n, 0, n);
 	int *b = SortTestHelper::copyIntArray(a, n);
@@ -16,11 +17,12 @@ int main()
 
 	SortTestHelper::testSort("selectionSort", selectionSort, a, n);
 	SortTestHelper::testSort("insertionSort", insertionSort, b, n);
-	SortTestHelper::printArray(c, n);
-	
 	SortTestHelper::testSort("mergeSort", mergeSort, c, n);
-//	SortTestHelper::testSort("shellSort", shellSort, d, n);
-	SortTestHelper::printArray(c, n);
+
+	//SortTestHelper::printArray(d, n);
+	SortTestHelper::testSort("quickSort", quickSort, d, n);
+	//	SortTestHelper::testSort("shellSort", shellSort, d, n);
+	//SortTestHelper::printArray(d, n);
 	;
 
 	delete[] a;
