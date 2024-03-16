@@ -73,3 +73,14 @@ void mergeSortBU(T arr[], int n)
         for (int i = 0; i + sz < n; i += sz + sz)
             __merge(arr, i, i + sz - 1,std::min((i + sz) + sz - 1, n - 1));
 }
+
+
+
+/*************
+ * 两种实现中，递归的实现更加高效
+ * 
+ *  优化：
+ *      1.插入排序优化递归到底的情况
+ *      2.针对近乎有序的数组，可以先比较  arr[mid]  arr[mid + 1]，再进行merge
+ * 
+*/
