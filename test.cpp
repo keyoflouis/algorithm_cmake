@@ -1,8 +1,9 @@
 
+#include "SortTestHelper.h"
+
 #include "insertionSort.h"
 #include "selectionSort.h"
 #include "mergeSort.h"
-#include "SortTestHelper.h"
 #include "shellSort.h"
 #include "quickSort.h"
 
@@ -23,7 +24,6 @@ int main()
 	SortTestHelper::testSort("quickSort", quickSort, d, n);
 	//	SortTestHelper::testSort("shellSort", shellSort, d, n);
 	//SortTestHelper::printArray(d, n);
-	;
 
 	delete[] a;
 	delete[] b;
