@@ -9,7 +9,7 @@
 
 int main()
 {
-	int n = 100000;
+	int n = 10000;
 
 	int *a = SortTestHelper::generateRandomArray(n, 0, n);
 	int *b = SortTestHelper::copyIntArray(a, n);
